@@ -13,9 +13,6 @@ services:
     volumes:
       - .:/var/app
 
-    external_links:
-      - necktie_web_1:necktie
-
   database:
     image: mysql
     ports:
@@ -29,8 +26,3 @@ services:
       - MYSQL_ROOT_PASSWORD=pass
     volumes:
       - ./data:/docker-entrypoint-initdb.d
-
-networks:
-  default:
-    external:
-      name: necktie_default
