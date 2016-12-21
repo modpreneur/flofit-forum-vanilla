@@ -1,0 +1,10 @@
+{
+    "name": "modpreneur/vanilla",
+    "authors": [
+        {
+            "name": "Tomáš Jančar",
+            "email": "jancar@modpreneur.com"
+        }
+    ],
+    "require": {}
+}
