@@ -7,9 +7,9 @@ services:
     links:
       - database:database
     ports:
-      - "8888:80"
+      - "9999:80"
     expose:
-      - "8888"
+      - "9999"
     volumes:
       - .:/var/app
 
