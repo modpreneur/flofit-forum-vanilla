@@ -665,7 +665,7 @@ CREATE TABLE `GDN_UserAuthenticationProvider` (
   `AssociationHashMethod` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `AuthenticateUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `RegisterUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `SignInUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `SignInUrl` varchar(400) COLLATE utf8_unicode_ci DEFAULT NULL,
   `SignOutUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `PasswordUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ProfileUrl` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -676,7 +676,7 @@ CREATE TABLE `GDN_UserAuthenticationProvider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `GDN_UserAuthenticationProvider` (`AuthenticationKey`, `AuthenticationSchemeAlias`, `Name`, `URL`, `AssociationSecret`, `AssociationHashMethod`, `AuthenticateUrl`, `RegisterUrl`, `SignInUrl`, `SignOutUrl`, `PasswordUrl`, `ProfileUrl`, `Attributes`, `Active`, `IsDefault`) VALUES
-('4_1hgk0m3gerhcows8o04c8o4ckco4o8kk44wg84gc4c44wk8k40',	'jsconnect',	'Necktie',	NULL,	'61a3kru5g4w8cc88c04cs8ggsc0w8ssckg44wkcks40wg4s8kg',	NULL,	'http://localhost/app_dev.php/community/vanilla/auth',	'',	'http://localhost/app_dev.php/oauth/v2/auth?client_id=4_1hgk0m3gerhcows8o04c8o4ckco4o8kk44wg84gc4c44wk8k40&client_secret=61a3kru5g4w8cc88c04cs8ggsc0w8ssckg44wkcks40wg4s8kg&response_type=code&state=xxx&redirect_uri={target}',	'http://localhost/app_dev.php/community/logout?redirect_uri={target}',	NULL,	NULL,	'a:3:{s:8:\"HashType\";s:3:\"md5\";s:7:\"Trusted\";b:0;s:8:\"TestMode\";b:0;}',	1,	1);
+('4_1hgk0m3gerhcows8o04c8o4ckco4o8kk44wg84gc4c44wk8k40',	'jsconnect',	'Necktie',	NULL,	'61a3kru5g4w8cc88c04cs8ggsc0w8ssckg44wkcks40wg4s8kg',	NULL,	'http://88.146.49.119/app_dev.php/community/vanilla/auth',	'',	'http://88.146.49.119/app_dev.php/oauth/v2/auth?client_id=4_1hgk0m3gerhcows8o04c8o4ckco4o8kk44wg84gc4c44wk8k40&client_secret=61a3kru5g4w8cc88c04cs8ggsc0w8ssckg44wkcks40wg4s8kg&response_type=code&state=xxx&grant_type=trusted_authorization&redirect_uri={target}',	'http://88.146.49.119/app_dev.php/community/logout?redirect_uri={target}',	NULL,	NULL,	'a:3:{s:8:\"HashType\";s:3:\"md5\";s:7:\"Trusted\";b:0;s:8:\"TestMode\";b:0;}',	1,	1);
 
 DROP TABLE IF EXISTS `GDN_UserAuthenticationToken`;
 CREATE TABLE `GDN_UserAuthenticationToken` (
