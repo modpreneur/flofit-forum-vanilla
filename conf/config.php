@@ -5,9 +5,9 @@ $Configuration['Conversations']['Version'] = '2.3';
 
 // Database
 $Configuration['Database']['Name'] = 'vanilla';
-$Configuration['Database']['Host'] = 'database';
-$Configuration['Database']['User'] = 'user';
-$Configuration['Database']['Password'] = 'pass';
+$Configuration['Database']['Host'] = 'flofit-forum-dev-mysql.cdnilimdj29x.us-east-1.rds.amazonaws.com';
+$Configuration['Database']['User'] = 'admin';
+$Configuration['Database']['Password'] = 'c8ENGhPGvsbdg6eP';
 
 // EnabledApplications
 $Configuration['EnabledApplications']['Conversations'] = 'conversations';
