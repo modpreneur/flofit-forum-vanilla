@@ -6,6 +6,12 @@
       "host": {
         "sourcePath": "/var/app/current"
       }
+    },
+    {
+      "name" : "nginx-symfony-conf",
+      "host" : {
+          "sourcePath": "/var/app/current/docker/symfony.conf"
+      }
     }
   ],
   "containerDefinitions": [
@@ -55,6 +61,11 @@
         {
           "sourceVolume": "awseb-logs-nginx-proxy",
           "containerPath": "/var/log/nginx"
+        },
+         {
+          "sourceVolume": "nginx-symfony-conf",
+          "containerPath": " /etc/nginx/sites-available/symfony.conf",
+          "readOnly": true
         }
       ]
     }
