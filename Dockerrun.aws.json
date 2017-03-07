@@ -62,7 +62,7 @@
           "sourceVolume": "awseb-logs-nginx-proxy",
           "containerPath": "/var/log/nginx"
         },
-         {
+        {
           "sourceVolume": "nginx-symfony-conf",
           "containerPath": " /etc/nginx/sites-available/",
           "readOnly": true
