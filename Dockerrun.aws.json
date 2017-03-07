@@ -18,6 +18,7 @@
     {
       "name": "php_fpm",
       "image": "modpreneur/necktie-fpm:0.6",
+      "entryPoint": ["sh", "./entrypoint.sh"],
       "essential": true,
       "memory": 768,
       "mountPoints": [
@@ -27,7 +28,7 @@
         },
         {
           "sourceVolume": "awseb-logs-php_fpm",
-          "containerPath": "/var/log/sample-app"
+          "containerPath": "/var/log"
         }
       ]
     },
