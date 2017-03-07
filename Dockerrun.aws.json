@@ -10,7 +10,7 @@
     {
       "name" : "nginx-symfony-conf",
       "host" : {
-          "sourcePath": "/var/app/current/docker/symfony.conf"
+          "sourcePath": "/var/app/current/docker/"
       }
     }
   ],
@@ -64,7 +64,7 @@
         },
          {
           "sourceVolume": "nginx-symfony-conf",
-          "containerPath": " /etc/nginx/sites-available/symfony.conf",
+          "containerPath": " /etc/nginx/sites-available/",
           "readOnly": true
         }
       ]
