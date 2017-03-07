@@ -1,24 +1,43 @@
 version: '2'
+
 services:
-  vanilla:
+
+  php_fpm:
     build:
       context: .
-      dockerfile: docker/dev/Dockerfile
+      dockerfile: docker/phpFpm/dev/Dockerfile
+    env_file: docker/.env
     links:
-      - database:database
+      - mysql:mysql
     ports:
-      - "9999:80"
-    expose:
-      - "9999"
+      #php-fpm
+      - "9093:9090"
     volumes:
       - .:/var/app
 
-  database:
-    image: mysql
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/dev/Dockerfile
     ports:
-      - "3310:3306"
+        - 8889:80
     expose:
-      - "3310"
+      - 8889
+    links:
+        - php_fpm
+    volumes_from:
+        - php_fpm
+    volumes:
+      - ./logs/nginx/:/var/log/nginx
+
+
+  mysql:
+    image: mysql/mysql-server
+    ports:
+      - 3310:3306
+    expose:
+      - 3310
     environment:
       - MYSQL_DATABASE=vanilla
       - MYSQL_USER=user
