@@ -1,0 +1,833 @@
+@primary-color: #00477C;
+@secondary-color: #00aeef;
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  padding-top: 73px;
+  font-family: 'Roboto', sans-serif !important;
+}
+a, input, h1, h2,
+h3, h4, h5, h6, p,
+textarea, .colrme {
+  font-family: 'Roboto', sans-serif !important;
+}
+a:hover {
+    color: @primary-color;
+}
+.block {
+  width: 100%;
+  text-align: center;
+  .block-left {
+    float:left;
+  }
+  .block-center {
+    display: inline-block;
+    margin:0 auto;
+  }
+  .block-right {
+    float:right;
+  }
+}
+header {
+  z-index: 99;
+  background-color: @primary-color;
+  background-color: rgba(0, 71, 124, 0.83);
+  height: 73px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  .logocol {
+    a {
+      display: inline-block;
+      padding: 10px 0;
+      vertical-align: middle;
+      width: auto;
+      height: auto;
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+      }
+      i {
+        color: #fff;
+        font-size: 50px;
+      }
+      &.logout {
+        color: #FFFFFF;
+        font-size: 17px;
+        font-weight: lighter;
+        vertical-align: baseline;
+        padding: 22px 0 26px;
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 20px;
+          width: 1px;
+          background-color: #fff;
+          margin-right: 15px;
+          top: 4px;
+          position: relative;
+        }
+      }
+    }
+    span {
+      display: inline-block;
+      color: #FFFFFF;
+      font-size: 17px;
+      font-weight: 300;
+      margin-right: 9px;
+      margin-left: 45px;
+    }
+  }
+  #cssmenu {
+    > ul {
+      > li {
+        margin: 0;
+        height: 73px;
+        top: 26px;
+        &.has-sub {
+          &::after {
+            border-top-color: #FFFFFF;
+            display: none;
+          }
+        }
+        > i {
+          pointer-events: none;
+          font-size: 25px !important;
+          top: -15px;
+        }
+        > a {
+          color: #FFFFFF;
+          padding: 44px 20px 16px;
+          font-weight: lighter;
+          &.Selected {
+            background-color: transparent;
+          }
+          &:hover {
+            color: #7da0d5;
+          }
+        }
+        &:hover {
+          &::after {
+            border-top-color: #7da0d5;
+          }
+          > ul {
+            border: solid 1px#ccc;
+            top: 55px;
+          }
+          > a {
+            border-top: 3px solid #7da0d5;
+          }
+        }
+        > ul {
+          &:before {
+            content: '';
+            border: 6px solid transparent;
+            width: 0;
+            height: 0;
+            border-bottom-color: #000;
+            position: absolute;
+            top: -12px;
+            left: 30px;
+          }
+        }
+      }
+      ul {
+        li {
+          &:hover {
+            > a {
+              color: @primary-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  #cssmenu > ul > li:hover > i,
+  #cssmenu > ul > li:hover > a,
+  #cssmenumob > ul > li > a:hover,
+  #cssmenu > ul > li > a:hover,
+  #cssmenumob > ul > li:hover > a {
+    background-color: transparent;
+    color: #7da0d5;
+  }
+}
+
+#searching {
+  background: url("../img/flofit-pttrn.png") no-repeat center;
+  height: 360px;
+  top: -100px;
+  position: relative;
+  padding-top: 100px;
+}
+.searchio {
+  i {
+    right: 24px;
+  }
+  .Button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 89%;
+  }
+}
+#Frame {
+  margin-bottom: 0;
+  position: relative;
+  top: -100px;
+}
+#orifooter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: @primary-color;
+  .footrip {
+    border-bottom: none;
+  }
+  .footdw {
+    padding-top: 0;
+    .row {
+      > div {
+        text-align: center;
+        img {
+          width: 160px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 39px;
+          color: @secondary-color;
+          font-weight: 300;
+          span {
+            color: #FFFFFF;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .footcop,
+    a {
+      i {
+        color: #fff;
+        font-size: 50px;
+      }
+    }
+  }
+}
+.MeBox {
+  margin: 30px 0 0;
+  .Username {
+    margin-left: 10px;
+    color: #124c81;
+    line-height: 25px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1px;
+    &:after {
+      content: "|";
+      position: relative;
+      display: inline-block;
+      margin: 0 2px 0 10px;
+      top: -1px;
+    }
+  }
+  .MeMenu {
+    display: inline-block;
+    a {
+      &:hover {
+        background-color: transparent;
+        span {
+          color: #333333;
+          &.Alert {
+            color: #FFFFFF;
+          }
+        }
+      }
+      span {
+        color: #777777;
+        &.Alert {
+          color: #fff;
+        }
+      }
+    }
+    .MenuItems a,
+    .MenuItems a:link,
+    .MenuItems a:visited,
+    .MenuItems a:active {
+      white-space: pre;
+      padding-left: 40px;
+      position: relative;
+    }
+    .MenuItems a:hover {
+      background: #1E5587 !important;
+    }
+  }
+}
+#Panel {
+  .ButtonGroup {
+    &.Big {
+      > .Button {
+        &:first-child {
+          display: inline-block;
+          width: 86.4%;
+          background-color: #ffffff;
+          border: solid 1px @primary-color;
+          color: @primary-color;
+          font-weight: normal;
+          text-transform: uppercase;
+          font-size: 13px;
+          padding: 10px 20px;
+          margin: 0 0 0 10px;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          &:hover {
+            background-color: @primary-color;
+            border: solid 1px @primary-color;
+            color: #FFFFFF;
+          }
+        }
+        &.Handle {
+          display: inline-block;
+          margin: 0;
+          border: solid 1px @primary-color;
+          border-left: none;
+          background-color: #ffffff;
+          padding: 8px 12px 10px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          &:hover {
+            background-color: @primary-color;
+            .Sprite {
+              border-color: #FFFFFF transparent transparent transparent;
+            }
+          }
+          .Sprite {
+            top: 1px;
+            border-color: @primary-color transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .Dropdown {
+      left: 10px;
+      border: solid 1px @primary-color;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      margin-top: -2px;
+      li {
+        a {
+          margin: 0;
+          border-radius: 0;
+          background-color: #FFFFFF;
+          color: #124c81 !important;
+          text-align: left;
+          border-bottom: solid 1px #e7e7de;
+          &:hover {
+            background-color: rgba(8, 37, 58, 0.81) !important;
+            color: #FFFFFF !important;
+          }
+        }
+        &:last-child {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    &.Open {
+      .Button {
+        &.Handle {
+          border-bottom-right-radius: 0;
+          background-color: @primary-color !important;
+          .Sprite {
+            border-color: #FFFFFF transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}
+.BoxCategories {
+  border: none;
+  h4 {
+    color: #124c81;
+  }
+}
+
+.PanelColumn {
+  li {
+    &.steam-btn {
+      a {
+        margin: 10px;
+      }
+    }
+  }
+}
+.PanelCategories {
+  li{
+    &:hover {
+      a {
+        color: #000;
+      }
+      .Count {
+        background: #039ddb;
+      }
+    }
+  }
+  .Count {
+    background: #039ddb;
+  }
+}
+.ToggleFlyout {
+  .Sprite {
+    height: 14px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    top: 7px;
+    background-image: url("http://flofit-community.local/applications/dashboard/design/images/sprites-14-000000.png");
+  //  position: absolute;
+  //  left: 10px;
+    &:hover {
+      background-image: url('http://cdn.vanillaforums.com/images/sprites-14-fff.png');
+    }
+    &.SpApplicants {
+      background-position: 22px -29px;
+    }
+    &.SpSpam {
+      background-position: 21px -4px;
+    }
+    &.SpMod {
+      background-position: 22px -100px;
+    }
+    &.SpDashboard {
+      background-position: 334px -100px;
+    }
+    &.SpSignOut {
+      background-position: -293px -100px;
+    }
+  }
+}
+label {
+  cursor: pointer;
+}
+.nomark, label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul.CategoryList li:last-child {
+  max-height: none;
+  min-height: auto;
+}
+#dashboard_entry_signin {
+  background: #002951 url("../img/login-jumbotron.jpg") no-repeat 0 0 / cover;
+}
+body.Section-Entry {
+  .Primary {
+    background-color: @secondary-color;
+    border: solid 1px @secondary-color;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+body.Section-Conversation .DataList .Meta {
+  background-color: #FFFFFF;
+}
+.DataList a.Delete {
+  padding: 1px 5px 2px;
+}
+.MenuItems a:hover {
+    background: @primary-color !important;
+    color: white !important;
+}
+.Info {
+    font-size: 13px;
+    background: #FFFFFF;
+  border: none;
+    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: #888;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 6px 8px;
+    margin: 10px 0;
+}
+.Empty {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 14px 14px 14px 62px;
+    min-height: 60px;
+    border-radius: 4px;
+    line-height: 40px;
+  margin: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border: solid 1px #CCCCCC;
+}
+.NewConversation {
+  background-color: @primary-color;
+  border: solid 1px @primary-color;
+  &:hover {
+    color: @primary-color;
+  }
+}
+.DataBox-Comments:hover .nocommentwrap {
+  background-color: @secondary-color;
+}
+.nocommentwrap {
+    background: @primary-color;
+}
+.AuthorWrap a {
+  color: @primary-color;
+}
+.colrme {
+  a {
+    color: @primary-color;
+  }
+}
+.Buttons {
+  .Button {
+    border-radius: 4px;
+    background-color: @primary-color;
+  }
+  .PreviewButton {
+    background-color: @secondary-color;
+    margin-left: 0;
+  }
+  .DraftButton {
+    background-color: #3fae2a;
+    margin-left: 6px !important;
+  }
+  .Cancel,
+  .Close {
+    background-color: #c01f25;
+  }
+}
+.AuthorWrap a:hover, .uiusx a:hover {
+  color: @secondary-color;
+}
+body.Section-Conversation .fulix input {
+  background-color: @primary-color;
+  border: solid 1px @primary-color;
+  &:hover {
+    background-color: transparent;
+    color: @primary-color;
+  }
+}
+a {
+  color: @primary-color;
+}
+body.Discussion ul.Comments {
+  overflow: visible;
+}
+
+.CategoryFilter {
+  margin: 13px;
+  padding-top: 15px;
+  a, .CategoryFilterTitle {
+    color: @primary-color;
+  }
+}
+.LastCommentBy a {
+  color: @primary-color;
+}
+.Tag-Closed {
+  background-color: @primary-color;
+  padding: 4px 7px 4px 21px;
+  &:before {
+      top: 3px;
+  }
+}
+a.Bookmark {
+  transition: all 0s;
+  background: none;
+  font-size: 14px;
+  text-indent: inherit;
+  width: 14px;
+  height: auto;
+  margin-left: 5px;
+  color: #777777;
+  vertical-align: top;
+  &:hover {
+    color: @primary-color;
+  }
+  &.Bookmarked {
+    color: gold;
+    &:before {
+      content: "\e71a";
+    }
+  }
+}
+.PageDescription {
+  border-bottom: solid 1px @primary-color;
+  color: @primary-color;
+  border-radius: 0;
+  margin-top: 0;
+  &:before {
+    color: @primary-color;
+  }
+}
+.ClearConversation {
+  background-color: #c01f25;
+  border: solid 1px #c01f25;
+  &:hover {
+    color: #c01f25;
+    background-color: transparent;
+    border: solid 1px #c01f25;
+    transition: all 0s;
+  }
+}
+.Column.PanelColumn {
+  .Button {
+    opacity: 1 !important;
+    transition: all 0.2s;
+    &:hover {
+      transition: all 0.2s;
+    }
+  }
+}
+body.Section-PostConversation .ContentColumn .Button {
+  background-color: @primary-color;
+}
+ul.Conversations li.iop,
+body.Section-DiscussionList ul.Discussions li.iop {
+  display: none;
+}
+.Item.Read {
+  border-bottom: 1px solid #ECECEC;
+}
+ul.Conversations li .Meta,
+body.Section-DiscussionList .DataList .Meta {
+  border: none;
+  margin-bottom: 0;
+}
+.PanelColumn li.steam-btn a {
+  background-color: @primary-color;
+  border: solid 1px @primary-color;
+  &:hover {
+    color: @primary-color;
+    background-color: transparent;
+  }
+}
+.PopList .ItemContent {
+  overflow: hidden;
+}
+.Note {
+  background-color: #c01f25;
+  &:hover {
+    background-color: #c01f25;
+  }
+}
+.endsteam span {
+  display: none;
+}
+.Item {
+  .OptionsTitle {
+    background: none;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    line-height: 1;
+    color: #777;
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}
+[class^="pe-7s-"], [class*=" pe-7s-"] {
+    font-family: 'Pe-icon-7-stroke' !important;
+}
+.Flyout {
+  &.MenuItems {
+    a {
+      padding: 7px 25px 7px 10px;
+    }
+  }
+}
+h1.H {
+  color: #047;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 50px auto 30px !important;
+}
+.uiusx {
+  a {
+    color: @primary-color;
+  }
+}
+ul.SearchResults {
+  .colrme {
+    margin-left: 10px;
+    display: inline-block;
+    top: 0;
+  }
+  .ItemContent {
+    padding-left: 3px;
+  }
+}
+
+.rounded-photo {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+.ff-circle-negative {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  display: inline-block;
+  span {
+    color: @primary-color;
+    font-size: 10px;
+    font-weight: 400;
+    .abs-center();
+  }
+  .current_ancestor,
+  .current {
+
+  }
+}
+.WhoIs {
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    &.PhotoWrap {
+      float: none;
+    }
+    &.Username {
+      vertical-align: middle;
+    }
+  }
+}
+.Author.Photo,
+.PopList .ItemContent {
+  display: inline-block;
+}
+.PopList {
+  .ItemContent {
+    vertical-align: middle;
+    margin-left: 15px;
+    width: 190px;
+  }
+}
+.Condensed.DataList.Conversations {
+  .Item.HasPhoto.Read {
+    padding: 18px 18px 18px 0;
+  }
+  .Users, .fox, .Meta {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 16px 0 0;
+    padding: 0;
+    a {
+      top: auto;
+    }
+  }
+  .Users {
+    .PhotoWrap {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .Excerpt {
+    display: block;
+    margin-left: 78px;
+    position: relative;
+    i, a {
+      top: auto;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 1;
+    }
+    a {
+      margin-left: 37px;
+      margin-top: 0;
+      display: block;
+      display: -webkit-box;
+      height: 20px;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.UserBox .WhoIs,
+.MeBox .WhoIs {
+  min-height: 80px;
+}
+.ConversationMessage {
+  .Author, .MItem, .PhotoWrap, .Name {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  .Author {
+    a.Name {
+      top: auto !important;
+    }
+    a {
+      margin-right: 16px;
+    }
+  }
+  .MItem {
+    i, span {
+      vertical-align: middle;
+    }
+  }
+  .PhotoWrap {
+    float: none;
+    padding: 0 !important;
+  }
+  .Message {
+    margin-left: 78px !important;
+  }
+}
+body.Section-Conversation .MeBox .PhotoWrap img {
+  top: auto;
+}
+.Flyout .Author .PhotoWrap {
+  top: auto;
+}
+@import "ff-icons";
+@import "tiecons";
