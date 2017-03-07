@@ -1,0 +1,372 @@
+#cssmenumob {
+  position: relative;
+  height: 44px;
+transition: all 0.4s;
+  width: auto;
+}
+#cssmenumob ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+#cssmenumob > ul {
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 500;
+}
+#cssmenumob:after,
+#cssmenumob > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenumob.align-right > ul > li {
+  float: right;
+}
+#cssmenumob.align-center ul {
+  text-align: center;
+}
+#cssmenumob.align-center ul ul {
+  text-align: left;
+}
+#cssmenumob > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;height: 93px;
+}
+#cssmenumob > ul > li.has-sub{
+
+height:110px;
+}
+
+
+#cssmenumob > ul > #menu-button {
+  display: none;
+}
+#cssmenumob ul li a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
+#cssmenumob > ul > li > a {
+  font-size: 14px;transition: all 0.4s;
+  font-weight: normal;
+  padding: 17px 20px 20px;
+  color: #333333;
+border-top: 3px solid rgba(255, 255, 255, 0);
+margin-top:-3px;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+#cssmenumob > ul > li.has-sub > a {
+
+}
+#cssmenumob > ul > li:hover > a {
+border-top: 3px solid #00dcb1;transition: all 0.4s;
+background: #f9f9f9;
+}
+#cssmenumob li.has-sub::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+#cssmenumob > ul > li.has-sub::after {
+  right: 20px;
+  top: 28px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+#cssmenumob > ul > li:hover::after {
+  border-top-color: #ffffff;
+}
+#indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+#pIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+#cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+#cssmenumob ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+}
+#cssmenumob ul ul ul {
+  top: 37px;
+  padding-left: 5px;
+}
+#cssmenumob ul ul li {
+  position: relative;
+}
+#cssmenumob > ul > li:hover > ul {
+  left: auto;
+  top: 51px;
+  opacity: 1;
+}
+#cssmenumob.align-right > ul > li:hover > ul {
+  left: auto;
+  right: 0;
+  opacity: 1;
+}
+#cssmenumob ul ul li:hover > ul {
+  left: 195px;
+  top: 0;
+  opacity: 1;
+}
+#cssmenumob.align-right ul ul li:hover > ul {
+  left: auto;
+  right: 170px;
+  top: 0;
+  opacity: 1;
+  padding-right: 5px;
+}
+#cssmenumob ul ul li a {
+  width: 200px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 15px 20px;
+font-size: 13px;
+  color: #9ea2a5;
+  background: #ffffff;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -ms-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+#cssmenumob.align-right ul ul li a {
+  text-align: right;
+}
+#cssmenumob ul ul li:hover > a {background: #039ddb;
+color: #FFFFFF;
+}
+
+#cssmenumob > ul > li:hover > ul > li {text-align:left;}
+
+#cssmenumob ul ul li:last-child > a,
+#cssmenumob ul ul li.last > a {
+  border-bottom: 0;
+}
+#cssmenumob > ul > li > ul::after {
+  content: '';
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ffffff;
+  position: absolute;
+  top: -12px;
+  left: 30px;
+}
+#cssmenumob.align-right > ul > li > ul::after {
+  left: auto;
+  right: 30px;
+}
+#cssmenumob ul ul li.has-sub::after {
+  border: 4px solid transparent;
+  border-left-color: #9ea2a5;
+  right: 10px;
+  top: 18px;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenumob.align-right ul ul li.has-sub::after {
+  border-left-color: transparent;
+  border-right-color: #9ea2a5;
+  right: auto;
+  left: 10px;
+}
+#cssmenumob ul ul li.has-sub:hover::after {
+border-left-color: #ffffff;
+right: 0px;
+-webkit-transform: rotateY(180deg);
+-ms-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+transform: rotateY(180deg);
+z-index: 1000;
+}
+#cssmenumob.align-right ul ul li.has-sub:hover::after {
+  border-right-color: #00dcb1;
+  border-left-color: transparent;
+  left: -5px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/*
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenumob {
+    width: auto;
+  }
+  #cssmenumob.align-center ul {
+    text-align: left;
+  }
+  #cssmenumob.align-right > ul > li {
+    float: none;
+  }
+  #cssmenumob ul {
+    width: auto;
+  }
+  #cssmenumob .submenuArrow,
+  #cssmenumob #indicatorContainer {
+    display: none;
+  }
+  #cssmenumob > ul {
+    height: auto;
+    display: block;
+  }
+  #cssmenumob > ul > li {
+    float: none;
+  }
+  #cssmenumob li,
+  #cssmenumob > ul > li {
+    display: none;
+  }
+  #cssmenumob ul ul,
+  #cssmenumob ul ul ul,
+  #cssmenumob ul > li:hover > ul,
+  #cssmenumob ul ul > li:hover > ul,
+  #cssmenumob.align-right ul ul,
+  #cssmenumob.align-right ul ul ul,
+  #cssmenumob.align-right ul > li:hover > ul,
+  #cssmenumob.align-right ul ul > li:hover > ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+    right: auto;
+  }
+  #cssmenumob ul .has-sub::after {
+    display: none;
+  }
+  #cssmenumob ul li a {
+    padding: 12px 20px;
+  }
+  #cssmenumob ul ul li a {
+    border: 0;
+    background: none;
+    width: auto;
+    padding: 8px 35px;
+  }
+  #cssmenumob.align-right ul ul li a {
+    text-align: left;
+  }
+  #cssmenumob ul ul li:hover > a {
+    background: none;
+    color: #8c9195;
+  }
+  #cssmenumob ul ul ul a {
+    padding: 8px 50px;
+  }
+  #cssmenumob ul ul ul ul a {
+    padding: 8px 65px;
+  }
+  #cssmenumob ul ul ul ul ul a {
+    padding: 8px 80px;
+  }
+  #cssmenumob ul ul ul ul ul ul a {
+    padding: 8px 95px;
+  }
+  #cssmenumob > ul > #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  #cssmenumob #menu-button > a {
+    padding: 14px 20px;
+  }
+  #cssmenumob ul.open li,
+  #cssmenumob > ul.open > li {
+    display: block;
+  }
+  #cssmenumob > ul.open > li#menu-button > a {
+    color: #fff;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+  }
+  #cssmenumob ul ul::after {
+    display: none;
+  }
+  #cssmenumob #menu-button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    border-bottom: 2px solid #7a8189;
+    right: 20px;
+    top: 15px;
+  }
+  #cssmenumob #menu-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    right: 20px;
+    top: 25px;
+  }
+  #cssmenumob ul.open #menu-button::after,
+  #cssmenumob ul.open #menu-button::before {
+    border-color: #fff;
+  }
+} */
+#cssmenumob ul ul li:hover > ul > li:hover > a {color:#333;background:white;}
+
+#cssmenumob ul ul li:first-child{
+border-top:none;
+}
+
+#cssmenumob > ul > li.has-sub a {}#cssmenumob > ul > li.has-sub {margin-left:-5px;}
+#cssmenumob > ul > li:first-child {margin-left:10px;}
+
+
+#Foot h6,#Frame h6,#searching h6{display:none;}
