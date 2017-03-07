@@ -64,7 +64,7 @@
         },
         {
           "sourceVolume": "nginx-symfony-conf",
-          "containerPath": " /etc/nginx/sites-available/",
+          "containerPath": "/etc/nginx/sites-available/",
           "readOnly": true
         }
       ]
