@@ -8,6 +8,29 @@
  * @since 2.0
  */
 
+if (!function_exists('userCustomProfilePhotoElement')) {
+    function userCustomProfilePhotoElement($username = "")
+    {
+        $env = config("Custom")["Flofit"]["Environment"];
+        $link = config("Custom")["Flofit"][$env];
+        if($username !== "")
+            return '<a title="' . $username . '" href="' . $link . '/p/' . $username . '" class="PhotoWrap"><img src="' . $link.'/web-api/core/profile-photo/' . $username  . '" class="ProfilePhoto ProfilePhotoMedium"></a>';
+        else
+            return '<a href="" class="PhotoWrap"><img src="' . $link.'/Resources/public/images/site/default-conversation-photo.png" class="ProfilePhoto ProfilePhotoMedium"></a>';
+    }
+}
+
+
+if (!function_exists('groupCustomProfilePhotoElement')) {
+    function groupCustomProfilePhotoElement()
+    {
+        $env = config("Custom")["Flofit"]["Environment"];
+        $link = config("Custom")["Flofit"][$env];
+        return '<a href="" class="PhotoWrap"><img src="' . $link.'/Resources/public/images/site/default-conversation-photo.png" class="ProfilePhoto ProfilePhotoMedium"></a>';
+    }
+}
+
+
 /**
  * Write alternating strings on each call.
  *

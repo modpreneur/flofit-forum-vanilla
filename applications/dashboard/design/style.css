@@ -1390,7 +1390,7 @@ overflow: hidden;
 
 .UserBox .WhoIs,
 .MeBox .WhoIs {
-  min-height: 40px;
+  min-height: 70px;
   line-height: 1.3;
 }
 

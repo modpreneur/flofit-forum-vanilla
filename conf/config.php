@@ -50,12 +50,39 @@ $Configuration['Plugins']['GettingStarted']['Profile'] = '1';
 $Configuration['Plugins']['GettingStarted']['Plugins'] = '1';
 $Configuration['Plugins']['GettingStarted']['Registration'] = '1';
 
+
+// Modules
+$Configuration['Modules']['Dashboard']['Panel'] = ['MeModule', 'UserBoxModule', 'ActivityFilterModule', 'UserPhotoModule', 'ProfileFilterModule', 'SideMenuModule', 'UserInfoModule', 'GuestModule', 'Ads'];
+$Configuration['Modules']['Dashboard']['Content'] = ['MessageModule', 'MeModule', 'UserBoxModule', 'ProfileOptionsModule', 'Notices', 'ActivityFilterModule', 'ProfileFilterModule', 'Content', 'Ads'];
+$Configuration['Modules']['Vanilla']['Panel'] = ['MeModule', 'UserBoxModule', 'GuestModule', 'NewDiscussionModule', 'DiscussionFilterModule', 'SignedInModule', 'Ads'];
+$Configuration['Modules']['Vanilla']['Content'] = ['MessageModule', 'MeModule', 'UserBoxModule', 'NewDiscussionModule', 'ProfileOptionsModule', 'Notices', 'NewConversationModule', 'NewDiscussionModule', 'DiscussionFilterModule', 'CategoryModeratorsModule', 'Content', 'Ads'];
+$Configuration['Modules']['Conversations']['Panel'] = ['MeModule', 'UserBoxModule', 'NewConversationModule', 'SignedInModule', 'GuestModule', 'Ads'];
+$Configuration['Modules']['Conversations']['Content'] = ['MessageModule', 'MeModule', 'UserBoxModule', 'NewConversationModule', 'Notices', 'Content', 'Ads'];
+
 // Routes
 $Configuration['Routes']['DefaultController'] = 'discussions';
+$Configuration['Routes']['DefaultForumRoot'] = 'discussions';
+$Configuration['Routes']['Default404'] = ['dashboard/home/filenotfound', 'NotFound'];
+$Configuration['Routes']['DefaultPermission'] = ['dashboard/home/unauthorized', 'NotAuthorized'];
+$Configuration['Routes']['UpdateMode'] = 'dashboard/home/updatemode';
 
 // Vanilla
 $Configuration['Vanilla']['Version'] = '2.3';
 $Configuration['Garden']['Theme']    = 'Cube';
-$Configuration['Debug'] = false;
+$Configuration['Debug'] = true;
+
+// Formatting
+$Configuration['Garden']['Format']['Mentions']                  = TRUE;
+$Configuration['Garden']['Format']['Hashtags']                  = TRUE;
+$Configuration['Garden']['Format']['YouTube']                   = TRUE;
+$Configuration['Garden']['Format']['Vimeo']                     = TRUE;
+$Configuration['Garden']['Format']['EmbedSize']                 = 'normal'; // tiny/small/normal/big/huge or WIDTHxHEIGHT
+
+
+$Configuration['Custom']['Flofit']['PublicProfileLink'] = 'http://my.flofit.com/p/';
+$Configuration['Custom']['Flofit']['Production'] = 'http://my.flofit.com';
+$Configuration['Custom']['Flofit']['Sandbox'] = 'http://community.flofit.getnecktie.com';
+$Configuration['Custom']['Flofit']['Localhost'] = 'http://localhost/FlofitVenice/web';
+$Configuration['Custom']['Flofit']['Environment'] = 'Localhost';
 
 // Last edited by superAdmin (172.19.0.1)2016-12-21 13:02:40
