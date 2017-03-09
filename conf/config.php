@@ -55,5 +55,6 @@ $Configuration['Routes']['DefaultController'] = 'discussions';
 
 // Vanilla
 $Configuration['Vanilla']['Version'] = '2.3';
+$Configuration['Garden']['Theme']    = 'Cube';
 
 // Last edited by superAdmin (172.19.0.1)2016-12-21 13:02:40
