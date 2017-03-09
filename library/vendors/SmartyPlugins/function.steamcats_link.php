@@ -1,4 +1,7 @@
-<?php if (!defined('APPLICATION')) exit();
+<?php if (!defined('APPLICATION')) {
+    exit();
+}
+
 /*
 Copyright 2008, 2009 Vanilla Forums Inc.
 This file is part of Garden.
@@ -8,12 +11,13 @@ You should have received a copy of the GNU General Public License along with Gar
 Contact Vanilla Forums Inc. at support [at] vanillaforums [dot] com
 */
 
-/*
- *
+/**
  */
-function smarty_function_steamhome_link($Params, &$Smarty) {
-   $Wrap = GetValue('wrap', $Params, 'li class="steamhome"');
-   return Gdn_Theme::Link('home',
-      GetValue('text', $Params, T('Home')),
-      GetValue('format', $Params, Wrap('<i class="ff-chat-conversation"></i><a href="%url" class="%class">Forum</a>', $Wrap)));
+function smarty_function_steamcats_link($Params, &$Smarty)
+{
+    $Wrap = GetValue('wrap', $Params, 'li class="steamcats"');
+    return Gdn_Theme::Link('categories',
+        GetValue('text', $Params, T('Categories')),
+        GetValue('format', $Params,
+            Wrap('<i class="ff-forum-thread"></i><a href="%url" class="%class">%text</a>', $Wrap)));
 }
