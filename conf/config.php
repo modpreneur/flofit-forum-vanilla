@@ -12,6 +12,7 @@ $Configuration['Database']['Password'] = 'c8ENGhPGvsbdg6eP';
 // EnabledApplications
 $Configuration['EnabledApplications']['Conversations'] = 'conversations';
 $Configuration['EnabledApplications']['Vanilla'] = 'vanilla';
+$Configuration['EnabledApplications']['api'] = 'api';
 
 // EnabledPlugins
 $Configuration['EnabledPlugins']['GettingStarted'] = 'GettingStarted';
