@@ -69,7 +69,7 @@ $Configuration['Routes']['UpdateMode'] = 'dashboard/home/updatemode';
 // Vanilla
 $Configuration['Vanilla']['Version'] = '2.3';
 $Configuration['Garden']['Theme']    = 'Cube';
-$Configuration['Debug'] = true;
+$Configuration['Debug'] = false;
 
 // Formatting
 $Configuration['Garden']['Format']['Mentions']                  = TRUE;
