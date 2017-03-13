@@ -1,5 +1,8 @@
 <?php if (!defined('APPLICATION')) exit();
 
+$Configuration['API']['Secret'] = '8894eee8-3d3c-4ea4-8465-5447d69a2f16';
+$Configuration['API']['Version'] = '0.5.0';
+
 // Conversations
 $Configuration['Conversations']['Version'] = '2.3';
 
