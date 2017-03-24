@@ -85,8 +85,8 @@ $Configuration['Garden']['Format']['EmbedSize']                 = 'normal'; // t
 
 $Configuration['Custom']['Flofit']['PublicProfileLink'] = 'http://my.flofit.com/p/';
 $Configuration['Custom']['Flofit']['Production'] = 'http://my.flofit.com';
-$Configuration['Custom']['Flofit']['Sandbox'] = 'http://community.flofit.getnecktie.com';
+$Configuration['Custom']['Flofit']['Sandbox'] = 'http://community.flofit.resultsink.getnecktie.com';
 $Configuration['Custom']['Flofit']['Localhost'] = 'http://localhost/FlofitVenice/web';
-$Configuration['Custom']['Flofit']['Environment'] = 'Localhost';
+$Configuration['Custom']['Flofit']['Environment'] = 'Sandbox';
 
 // Last edited by superAdmin (172.19.0.1)2016-12-21 13:02:40
