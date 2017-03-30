@@ -13,6 +13,9 @@ if (!function_exists('userCustomProfilePhotoElement')) {
     {
         $env = config("Custom")["Flofit"]["Environment"];
         $link = config("Custom")["Flofit"][$env];
+
+        return '<a href="" class="PhotoWrap"><img src="' . $link.'/Resources/public/images/site/default-conversation-photo.png" class="ProfilePhoto ProfilePhotoMedium"></a>';
+
         if($username !== "")
             return '<a title="' . $username . '" href="' . $link . '/p/' . $username . '" class="PhotoWrap"><img src="' . $link.'/web-api/core/profile-photo/' . $username  . '" class="ProfilePhoto ProfilePhotoMedium"></a>';
         else
