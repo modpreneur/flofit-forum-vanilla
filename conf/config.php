@@ -27,6 +27,7 @@ $Configuration['EnabledPlugins']['jsconnectAutoSignIn'] = true;
 $Configuration['Garden']['Title'] = 'Vanilla';
 $Configuration['Garden']['Cookie']['Salt'] = 'zOJXVRhOpSfsHf1G';
 $Configuration['Garden']['Cookie']['Domain'] = '';
+$Configuration['Garden']['Registration']['AutoConnect'] = true;
 $Configuration['Garden']['Registration']['ConfirmEmail'] = false;
 $Configuration['Garden']['Registration']['Method'] = 'Connect';
 $Configuration['Garden']['Registration']['InviteExpiration'] = '1 week';
