@@ -23,7 +23,7 @@ services:
     ports:
         - 8889:80
     expose:
-      - 8889
+      - 888
     links:
         - php_fpm
     volumes_from:

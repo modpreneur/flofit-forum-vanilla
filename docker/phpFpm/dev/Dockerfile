@@ -1,6 +1,6 @@
-FROM modpreneur/necktie-fpm-dev:0.7
+FROM modpreneur/necktie-fpm-dev:0.10.1
 
-MAINTAINER Martin Kolek <kolek@modpreneur.com>a
+MAINTAINER Martin Kolek <kolek@modpreneur.com>
 
 
 #RUN chmod +x docker/phpFpm/dev/entrypoint.sh
